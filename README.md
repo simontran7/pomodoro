@@ -1,3 +1,3 @@
 # mango
 
-memorize texts by blurting
+blurting memorization tool
