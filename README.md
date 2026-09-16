@@ -1,3 +1,3 @@
-# memorize
+# mango
 
-
+memorize texts by blurting
