@@ -217,7 +217,19 @@ function App() {
             </button>
 
             <div className="controls">
-              <span className="control-spacer" />
+              {/* Restart only the current phase; the session count is kept. Hidden while the timer is untouched. */}
+              <button
+                className="icon-btn"
+                aria-label="Restart current session"
+                title="Restart"
+                style={{ visibility: running || remaining < total ? "visible" : "hidden" }}
+                onClick={() => switchTo(mode)}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 12a8 8 0 1 0 2.34-5.66" />
+                  <path d="M4 4v4.5h4.5" />
+                </svg>
+              </button>
               <button className={`btn btn-start${running ? " running" : ""}`} onClick={toggle}>
                 {running ? "Pause" : "Start"}
               </button>
